@@ -1,0 +1,2879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Curriculum Vitae | Clabe Wekesa</title>
+
+  <meta
+    name="description"
+    content="Curriculum Vitae of Clabe Wekesa, PhD — bioinformatician, molecular biologist, researcher, and developer of scientific bioinformatics software."
+  >
+
+  <meta name="author" content="Clabe Wekesa">
+
+  <meta name="theme-color" content="#0b3040">
+
+
+  <style>
+
+    /* ==========================================================
+       COLORS & GLOBAL SETTINGS
+    ========================================================== */
+
+    :root {
+      --navy-dark: #071f2b;
+      --navy: #0b3040;
+      --navy-light: #164b5c;
+
+      --teal: #0d7b78;
+      --teal-light: #dff4f1;
+      --teal-pale: #eef9f7;
+
+      --blue: #2563a6;
+      --gold: #c89b34;
+
+      --white: #ffffff;
+
+      --background: #f5f8fa;
+      --surface: #ffffff;
+
+      --text: #20313d;
+      --text-soft: #586b78;
+      --text-light: #7a8993;
+
+      --border: #dce5e9;
+
+      --shadow:
+        0 15px 40px rgba(7, 31, 43, 0.08);
+
+      --shadow-light:
+        0 7px 22px rgba(7, 31, 43, 0.05);
+
+      --radius: 15px;
+
+      --max-width: 1180px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        linear-gradient(
+          180deg,
+          #f8fafb,
+          #f2f6f8
+        );
+
+      line-height: 1.65;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    a {
+      text-decoration: none;
+      color: var(--teal);
+    }
+
+
+    a:hover {
+      text-decoration: none;
+    }
+
+
+    .container {
+      width:
+        min(
+          var(--max-width),
+          calc(100% - 40px)
+        );
+
+      margin: 0 auto;
+    }
+
+
+    /* ==========================================================
+       TOP NAVIGATION
+    ========================================================== */
+
+    nav {
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      background:
+        rgba(255, 255, 255, 0.96);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .nav-inner {
+      min-height: 68px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+
+    .brand {
+      display: flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      color: var(--navy);
+
+      font-weight: 800;
+
+      letter-spacing: -0.02em;
+    }
+
+
+    .brand-mark {
+      width: 38px;
+
+      height: 38px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 10px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--teal)
+        );
+
+      font-size: 0.82rem;
+
+      font-weight: 850;
+    }
+
+
+    .nav-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 18px;
+
+      align-items: center;
+    }
+
+
+    .nav-links a {
+      color: var(--text-soft);
+
+      font-size: 0.88rem;
+
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+
+    .home-link {
+      padding: 8px 14px;
+
+      border-radius: 8px;
+
+      border:
+        1px solid var(--border);
+
+      color: var(--navy) !important;
+
+      background: #ffffff;
+    }
+
+
+    .home-link:hover {
+      border-color: var(--teal);
+    }
+
+
+    /* ==========================================================
+       CV HERO
+    ========================================================== */
+
+    .cv-hero {
+      position: relative;
+
+      overflow: hidden;
+
+      color: #ffffff;
+
+      background:
+
+        radial-gradient(
+          circle at 88% 10%,
+          rgba(29, 173, 164, 0.24),
+          transparent 32%
+        ),
+
+        radial-gradient(
+          circle at 4% 90%,
+          rgba(37, 99, 166, 0.14),
+          transparent 35%
+        ),
+
+        linear-gradient(
+          135deg,
+          var(--navy-dark),
+          var(--navy),
+          #10505d
+        );
+    }
+
+
+    .cv-hero-inner {
+      min-height: 370px;
+
+      padding: 70px 0 65px;
+
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.4fr)
+        minmax(260px, 0.6fr);
+
+      align-items: center;
+
+      gap: 55px;
+    }
+
+
+    .hero-label {
+      margin-bottom: 12px;
+
+      color: #95ddd8;
+
+      font-size: 0.78rem;
+
+      font-weight: 850;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.14em;
+    }
+
+
+    h1 {
+      margin: 0;
+
+      font-size:
+        clamp(2.8rem, 6vw, 5.1rem);
+
+      line-height: 1;
+
+      letter-spacing: -0.05em;
+    }
+
+
+    .hero-subtitle {
+      margin-top: 18px;
+
+      font-size: 1.25rem;
+
+      color: #d1e3e8;
+
+      font-weight: 600;
+    }
+
+
+    .hero-description {
+      max-width: 760px;
+
+      margin-top: 18px;
+
+      color: #c8d8de;
+
+      font-size: 1rem;
+    }
+
+
+    .hero-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      margin-top: 27px;
+    }
+
+
+    .button {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 10px 17px;
+
+      border-radius: 9px;
+
+      font-size: 0.88rem;
+
+      font-weight: 750;
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+
+    .button-light {
+      background: #ffffff;
+
+      color: var(--navy);
+    }
+
+
+    .button-outline {
+      color: #ffffff;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.28
+        );
+    }
+
+
+    .button-outline:hover {
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.08
+        );
+    }
+
+
+    .hero-monogram {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+    }
+
+
+    .monogram {
+      position: relative;
+
+      width: 195px;
+
+      height: 195px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 50%;
+
+      color: #ffffff;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.22
+        );
+
+      background:
+        rgba(
+          255,
+          255,
+          255,
+          0.07
+        );
+
+      font-size: 3.5rem;
+
+      font-weight: 800;
+
+      letter-spacing: -0.08em;
+    }
+
+
+    .monogram::before {
+      content: "";
+
+      position: absolute;
+
+      width: 225px;
+
+      height: 225px;
+
+      border-radius: 50%;
+
+      border:
+        1px solid rgba(
+          255,
+          255,
+          255,
+          0.10
+        );
+    }
+
+
+    /* ==========================================================
+       MAIN CV LAYOUT
+    ========================================================== */
+
+    .cv-layout {
+      display: grid;
+
+      grid-template-columns:
+        290px
+        minmax(0, 1fr);
+
+      gap: 32px;
+
+      padding: 42px 0 80px;
+    }
+
+
+    /* ==========================================================
+       SIDEBAR
+    ========================================================== */
+
+    .sidebar {
+      align-self: start;
+
+      position: sticky;
+
+      top: 92px;
+    }
+
+
+    .sidebar-card {
+      margin-bottom: 20px;
+
+      padding: 23px;
+
+      background: var(--surface);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow-light);
+    }
+
+
+    .sidebar-title {
+      margin: 0 0 15px;
+
+      color: var(--navy);
+
+      font-size: 0.82rem;
+
+      font-weight: 850;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.1em;
+    }
+
+
+    .contact-row {
+      margin-bottom: 14px;
+    }
+
+
+    .contact-row:last-child {
+      margin-bottom: 0;
+    }
+
+
+    .contact-label {
+      display: block;
+
+      margin-bottom: 2px;
+
+      color: var(--text-light);
+
+      font-size: 0.7rem;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.08em;
+    }
+
+
+    .contact-row a,
+    .contact-row span {
+      color: var(--text);
+
+      font-size: 0.86rem;
+
+      word-break: break-word;
+    }
+
+
+    .contact-row a:hover {
+      color: var(--teal);
+    }
+
+
+    .skills-list {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+    }
+
+
+    .skill {
+      padding: 5px 9px;
+
+      border-radius: 999px;
+
+      background: var(--teal-pale);
+
+      color: var(--teal);
+
+      font-size: 0.73rem;
+
+      font-weight: 700;
+    }
+
+
+    .language-item {
+      display: flex;
+
+      justify-content: space-between;
+
+      gap: 12px;
+
+      padding: 7px 0;
+
+      border-bottom:
+        1px solid var(--border);
+
+      font-size: 0.85rem;
+    }
+
+
+    .language-item:last-child {
+      border-bottom: none;
+    }
+
+
+    .language-level {
+      color: var(--text-soft);
+    }
+
+
+    /* ==========================================================
+       MAIN CONTENT
+    ========================================================== */
+
+    .content {
+      min-width: 0;
+    }
+
+
+    .cv-section {
+      margin-bottom: 27px;
+
+      padding: 30px;
+
+      background: var(--surface);
+
+      border:
+        1px solid var(--border);
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow-light);
+    }
+
+
+    .section-heading {
+      display: flex;
+
+      align-items: center;
+
+      gap: 13px;
+
+      margin-bottom: 22px;
+    }
+
+
+    .section-number {
+      min-width: 34px;
+
+      height: 34px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 9px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--teal)
+        );
+
+      color: #ffffff;
+
+      font-size: 0.72rem;
+
+      font-weight: 850;
+    }
+
+
+    h2 {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size: 1.55rem;
+
+      letter-spacing: -0.025em;
+    }
+
+
+    .summary-text {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.97rem;
+    }
+
+
+    /* ==========================================================
+       EXPERIENCE
+    ========================================================== */
+
+    .timeline-item {
+      position: relative;
+
+      padding-left: 23px;
+
+      padding-bottom: 27px;
+
+      border-left:
+        2px solid #d8e9e8;
+    }
+
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+
+    .timeline-item::before {
+      content: "";
+
+      position: absolute;
+
+      left: -7px;
+
+      top: 5px;
+
+      width: 12px;
+
+      height: 12px;
+
+      border-radius: 50%;
+
+      background: var(--teal);
+
+      border:
+        3px solid var(--teal-light);
+    }
+
+
+    .experience-header {
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-start;
+
+      gap: 20px;
+
+      margin-bottom: 4px;
+    }
+
+
+    .experience-title {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size: 1.08rem;
+
+      font-weight: 800;
+    }
+
+
+    .experience-date {
+      flex-shrink: 0;
+
+      padding: 4px 9px;
+
+      border-radius: 7px;
+
+      color: var(--teal);
+
+      background: var(--teal-pale);
+
+      font-size: 0.75rem;
+
+      font-weight: 800;
+    }
+
+
+    .institution {
+      margin-bottom: 12px;
+
+      color: var(--text-soft);
+
+      font-size: 0.88rem;
+
+      font-weight: 650;
+    }
+
+
+    .cv-list {
+      margin: 0;
+
+      padding-left: 18px;
+    }
+
+
+    .cv-list li {
+      margin-bottom: 7px;
+
+      color: var(--text-soft);
+
+      font-size: 0.9rem;
+    }
+
+
+    /* ==========================================================
+       EDUCATION
+    ========================================================== */
+
+    .education-item {
+      display: grid;
+
+      grid-template-columns:
+        1fr;
+
+      gap: 2px;
+
+      padding: 16px 0;
+
+      border-bottom:
+        1px solid var(--border);
+    }
+
+
+    .education-item:first-child {
+      padding-top: 0;
+    }
+
+
+    .education-item:last-child {
+      border-bottom: none;
+
+      padding-bottom: 0;
+    }
+
+
+    .degree {
+      color: var(--navy);
+
+      font-weight: 800;
+    }
+
+
+    .school {
+      color: var(--text-soft);
+
+      font-size: 0.9rem;
+    }
+
+
+    .education-description {
+      margin-top: 5px;
+
+      color: var(--text-soft);
+
+      font-size: 0.86rem;
+    }
+
+
+    /* ==========================================================
+       PROJECTS
+    ========================================================== */
+
+    .project-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          2,
+          minmax(0, 1fr)
+        );
+
+      gap: 15px;
+    }
+
+
+    .project-card {
+      padding: 19px;
+
+      border:
+        1px solid var(--border);
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #f8fbfb
+        );
+    }
+
+
+    .project-card.featured {
+      grid-column: 1 / -1;
+
+      color: #ffffff;
+
+      border: none;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy-dark),
+          var(--navy),
+          var(--teal)
+        );
+    }
+
+
+    .project-card h3 {
+      margin: 0 0 7px;
+
+      color: var(--navy);
+
+      font-size: 1rem;
+    }
+
+
+    .project-card.featured h3 {
+      color: #ffffff;
+
+      font-size: 1.25rem;
+    }
+
+
+    .project-card p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.86rem;
+    }
+
+
+    .project-card.featured p {
+      color: #d2e4e7;
+    }
+
+
+    .project-link {
+      display: inline-block;
+
+      margin-top: 12px;
+
+      font-size: 0.82rem;
+
+      font-weight: 750;
+
+      color: #a4e4de;
+    }
+
+
+    /* ==========================================================
+       TECHNICAL SKILLS
+    ========================================================== */
+
+    .skill-category {
+      margin-bottom: 19px;
+    }
+
+
+    .skill-category:last-child {
+      margin-bottom: 0;
+    }
+
+
+    .skill-category h3 {
+      margin: 0 0 9px;
+
+      color: var(--navy);
+
+      font-size: 0.9rem;
+    }
+
+
+    .tech-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 7px;
+    }
+
+
+    .tech-tag {
+      padding: 5px 9px;
+
+      border-radius: 7px;
+
+      color: var(--text-soft);
+
+      background: var(--background);
+
+      border:
+        1px solid var(--border);
+
+      font-size: 0.76rem;
+
+      font-weight: 650;
+    }
+
+
+    /* ==========================================================
+       SOFTWARE
+    ========================================================== */
+
+    .software-item {
+      margin-bottom: 17px;
+
+      padding: 17px 19px;
+
+      border-left:
+        4px solid var(--teal);
+
+      border-radius:
+        0 10px 10px 0;
+
+      background: #f7fbfb;
+    }
+
+
+    .software-item:last-child {
+      margin-bottom: 0;
+    }
+
+
+    .software-item h3 {
+      margin: 0 0 4px;
+
+      color: var(--navy);
+
+      font-size: 0.95rem;
+    }
+
+
+    .software-item p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.87rem;
+    }
+
+
+    /* ==========================================================
+       INTERESTS
+    ========================================================== */
+
+    .interest-tags {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 9px;
+
+      margin-bottom: 18px;
+    }
+
+
+    .interest-tag {
+      padding: 7px 11px;
+
+      border-radius: 999px;
+
+      background: var(--teal-light);
+
+      color: var(--teal);
+
+      font-size: 0.78rem;
+
+      font-weight: 750;
+    }
+
+
+    /* ==========================================================
+       FOOTER
+    ========================================================== */
+
+    footer {
+      background: var(--navy-dark);
+
+      color: #b9cdd5;
+    }
+
+
+    .footer-inner {
+      min-height: 105px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+
+      gap: 20px;
+
+      font-size: 0.82rem;
+    }
+
+
+    .footer-links {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 16px;
+    }
+
+
+    .footer-links a {
+      color: #d4e3e8;
+    }
+
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+
+    /* ==========================================================
+       PRINT
+    ========================================================== */
+
+    @media print {
+
+      nav,
+      footer,
+      .hero-monogram,
+      .hero-buttons {
+        display: none;
+      }
+
+
+      body {
+        background: #ffffff;
+      }
+
+
+      .cv-hero {
+        color: #000000;
+
+        background: #ffffff;
+      }
+
+
+      .cv-hero-inner {
+        min-height: auto;
+
+        padding: 30px 0;
+      }
+
+
+      .cv-hero h1,
+      .hero-subtitle {
+        color: #000000;
+      }
+
+
+      .hero-description,
+      .hero-label {
+        color: #444444;
+      }
+
+
+      .cv-layout {
+        padding-top: 10px;
+      }
+
+
+      .sidebar {
+        position: static;
+      }
+
+
+      .sidebar-card,
+      .cv-section {
+        box-shadow: none;
+
+        break-inside: avoid;
+      }
+
+    }
+
+
+    /* ==========================================================
+       RESPONSIVE DESIGN
+    ========================================================== */
+
+    @media (max-width: 950px) {
+
+      .cv-hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero-monogram {
+        display: none;
+      }
+
+
+      .cv-layout {
+        grid-template-columns: 1fr;
+      }
+
+
+      .sidebar {
+        position: static;
+
+        display: grid;
+
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(0, 1fr)
+          );
+
+        gap: 18px;
+      }
+
+
+      .sidebar-card {
+        margin-bottom: 0;
+      }
+
+    }
+
+
+    @media (max-width: 720px) {
+
+      .nav-inner {
+        padding: 12px 0;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+      }
+
+
+      .nav-links {
+        gap: 11px;
+      }
+
+
+      .cv-hero-inner {
+        padding: 55px 0;
+      }
+
+
+      .cv-layout {
+        padding-top: 25px;
+      }
+
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .project-card.featured {
+        grid-column: auto;
+      }
+
+
+      .experience-header {
+        flex-direction: column;
+
+        gap: 5px;
+      }
+
+
+      .cv-section {
+        padding: 23px;
+      }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+      .container {
+        width:
+          min(
+            var(--max-width),
+            calc(100% - 28px)
+          );
+      }
+
+
+      h1 {
+        font-size: 3rem;
+      }
+
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+
+      .button {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+
+
+  <!-- Structured profile information -->
+  <script type="application/ld+json">
+
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+
+    "name": "Clabe Wekesa",
+
+    "honorificSuffix": "PhD",
+
+    "url": "https://clabe-wekesa.github.io",
+
+    "email": "mailto:simiyu86wekesa@gmail.com",
+
+    "sameAs": [
+      "https://github.com/clabe-wekesa",
+      "https://orcid.org/0000-0002-1815-9357",
+      "https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+    ],
+
+    "jobTitle":
+      "Bioinformatician and Molecular Biologist",
+
+    "knowsAbout": [
+      "Bioinformatics",
+      "Computational Biology",
+      "Molecular Biology",
+      "Microbiology",
+      "Microbial Genomics",
+      "Transcriptomics",
+      "RNA-seq",
+      "Metagenomics",
+      "Multi-omics",
+      "Plant-Microbe Interactions"
+    ]
+
+  }
+
+  </script>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================================
+     NAVIGATION
+========================================================== -->
+
+<nav>
+
+  <div class="container nav-inner">
+
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+
+      <span class="brand-mark">
+        CW
+      </span>
+
+      <span>
+        Clabe Wekesa
+      </span>
+
+    </a>
+
+
+    <div class="nav-links">
+
+      <a href="#profile">
+        Profile
+      </a>
+
+      <a href="#experience">
+        Experience
+      </a>
+
+      <a href="#education">
+        Education
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#skills">
+        Skills
+      </a>
+
+      <a
+        class="home-link"
+        href="index.html"
+      >
+        ← Main Website
+      </a>
+
+    </div>
+
+
+  </div>
+
+</nav>
+
+
+
+<!-- ==========================================================
+     HERO
+========================================================== -->
+
+<header class="cv-hero">
+
+  <div class="container cv-hero-inner">
+
+
+    <div>
+
+      <div class="hero-label">
+        Curriculum Vitae
+      </div>
+
+
+      <h1>
+        Clabe Wekesa, PhD
+      </h1>
+
+
+      <div class="hero-subtitle">
+
+        Bioinformatician · Molecular Biologist ·
+        Computational Biology · Microbial Genomics
+
+      </div>
+
+
+      <p class="hero-description">
+
+        Molecular biologist and computational scientist
+        combining experimental biology, high-throughput
+        sequencing, bioinformatics, multi-omics integration,
+        scientific software development, and reproducible
+        computational research.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+
+        <a
+          class="button button-light"
+          href="Clabe_Wekesa_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View PDF CV
+        </a>
+
+
+        <a
+          class="button button-outline"
+          href="Clabe_Wekesa_CV.pdf"
+          download
+        >
+          Download PDF
+        </a>
+
+
+        <a
+          class="button button-outline"
+          href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Scholar
+        </a>
+
+
+      </div>
+
+    </div>
+
+
+    <div class="hero-monogram">
+
+      <div class="monogram">
+        CW
+      </div>
+
+    </div>
+
+
+  </div>
+
+</header>
+
+
+
+<!-- ==========================================================
+     CV CONTENT
+========================================================== -->
+
+<main>
+
+  <div class="container cv-layout">
+
+
+    <!-- ======================================================
+         SIDEBAR
+    ======================================================= -->
+
+    <aside class="sidebar">
+
+
+      <!-- Contact -->
+
+      <div class="sidebar-card">
+
+        <h3 class="sidebar-title">
+          Contact
+        </h3>
+
+
+        <div class="contact-row">
+
+          <span class="contact-label">
+            Email
+          </span>
+
+          <a
+            href="mailto:simiyu86wekesa@gmail.com"
+          >
+            simiyu86wekesa@gmail.com
+          </a>
+
+        </div>
+
+
+        <div class="contact-row">
+
+          <span class="contact-label">
+            Location
+          </span>
+
+          <span>
+            Jena, Germany
+          </span>
+
+        </div>
+
+
+        <div class="contact-row">
+
+          <span class="contact-label">
+            GitHub
+          </span>
+
+          <a
+            href="https://github.com/clabe-wekesa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            clabe-wekesa
+          </a>
+
+        </div>
+
+
+        <div class="contact-row">
+
+          <span class="contact-label">
+            ORCID
+          </span>
+
+          <a
+            href="https://orcid.org/0000-0002-1815-9357"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            0000-0002-1815-9357
+          </a>
+
+        </div>
+
+
+        <div class="contact-row">
+
+          <span class="contact-label">
+            Google Scholar
+          </span>
+
+          <a
+            href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Research Profile
+          </a>
+
+        </div>
+
+
+        <div class="contact-row">
+
+          <span class="contact-label">
+            Website
+          </span>
+
+          <a
+            href="https://clabe-wekesa.github.io"
+          >
+            clabe-wekesa.github.io
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Core Expertise -->
+
+      <div class="sidebar-card">
+
+        <h3 class="sidebar-title">
+          Core Expertise
+        </h3>
+
+
+        <div class="skills-list">
+
+          <span class="skill">
+            Bioinformatics
+          </span>
+
+          <span class="skill">
+            Molecular Biology
+          </span>
+
+          <span class="skill">
+            Microbiology
+          </span>
+
+          <span class="skill">
+            Genomics
+          </span>
+
+          <span class="skill">
+            Transcriptomics
+          </span>
+
+          <span class="skill">
+            RNA-seq
+          </span>
+
+          <span class="skill">
+            Metagenomics
+          </span>
+
+          <span class="skill">
+            Multi-omics
+          </span>
+
+          <span class="skill">
+            Microbial Ecology
+          </span>
+
+          <span class="skill">
+            Plant–Microbe Interactions
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Programming -->
+
+      <div class="sidebar-card">
+
+        <h3 class="sidebar-title">
+          Computing
+        </h3>
+
+
+        <div class="skills-list">
+
+          <span class="skill">
+            Python
+          </span>
+
+          <span class="skill">
+            R
+          </span>
+
+          <span class="skill">
+            Bash
+          </span>
+
+          <span class="skill">
+            Linux
+          </span>
+
+          <span class="skill">
+            Git/GitHub
+          </span>
+
+          <span class="skill">
+            HPC
+          </span>
+
+          <span class="skill">
+            Conda
+          </span>
+
+          <span class="skill">
+            Docker
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Languages -->
+
+      <div class="sidebar-card">
+
+        <h3 class="sidebar-title">
+          Languages
+        </h3>
+
+
+        <div class="language-item">
+
+          <strong>
+            English
+          </strong>
+
+          <span class="language-level">
+            Fluent
+          </span>
+
+        </div>
+
+
+        <div class="language-item">
+
+          <strong>
+            German
+          </strong>
+
+          <span class="language-level">
+            Intermediate
+          </span>
+
+        </div>
+
+
+        <div class="language-item">
+
+          <strong>
+            Swahili
+          </strong>
+
+          <span class="language-level">
+            Native
+          </span>
+
+        </div>
+
+      </div>
+
+
+    </aside>
+
+
+
+    <!-- ======================================================
+         MAIN COLUMN
+    ======================================================= -->
+
+    <div class="content">
+
+
+      <!-- PROFILE -->
+
+      <section
+        class="cv-section"
+        id="profile"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            01
+          </div>
+
+          <h2>
+            Professional Profile
+          </h2>
+
+        </div>
+
+
+        <p class="summary-text">
+
+          Computational biologist and molecular microbiologist
+          with experience in bioinformatics, transcriptomics,
+          genomics, metagenomics, multi-omics data integration,
+          and reproducible computational workflow development.
+
+          Experienced in analysing large-scale sequencing datasets
+          and integrating transcriptomic, metabolomic, microbiome,
+          phenotypic, and environmental data to investigate complex
+          biological processes.
+
+          Strong programming and data-analysis experience in
+          Python and R, together with Linux, shell scripting,
+          high-performance computing, and scientific software
+          development.
+
+        </p>
+
+      </section>
+
+
+
+      <!-- EXPERIENCE -->
+
+      <section
+        class="cv-section"
+        id="experience"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            02
+          </div>
+
+          <h2>
+            Research & Professional Experience
+          </h2>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+          <div class="experience-header">
+
+            <h3 class="experience-title">
+              Postdoctoral Researcher
+            </h3>
+
+            <span class="experience-date">
+              2023–2025
+            </span>
+
+          </div>
+
+
+          <div class="institution">
+
+            Max Planck Institute for Chemical Ecology ·
+            Jena, Germany
+
+          </div>
+
+
+          <ul class="cv-list">
+
+            <li>
+              Developed and implemented computational workflows
+              for transcriptomic, metagenomic, metabolomic,
+              and integrative biological data analyses.
+            </li>
+
+            <li>
+              Analysed RNA-seq datasets and performed
+              differential gene-expression and functional
+              analyses using R- and Linux-based workflows.
+            </li>
+
+            <li>
+              Integrated transcriptomic, metabolomic,
+              microbiome, phenotypic, and environmental
+              datasets to investigate biological responses
+              across multiple molecular and organismal levels.
+            </li>
+
+            <li>
+              Developed reproducible Python, R, and Bash
+              workflows for processing, analysing, and
+              visualising large biological datasets.
+            </li>
+
+            <li>
+              Managed large sequencing datasets and
+              computational analyses in high-performance
+              computing environments.
+            </li>
+
+            <li>
+              Applied statistical and machine-learning
+              approaches to identify biologically meaningful
+              patterns within complex datasets.
+            </li>
+
+            <li>
+              Worked closely with experimental scientists
+              to connect computational results with
+              biological hypotheses and observations.
+            </li>
+
+            <li>
+              Coordinated collaborative research activities
+              between scientists in Germany and Norway.
+            </li>
+
+            <li>
+              Contributed to manuscripts, project reports,
+              scientific presentations, collaborative
+              proposals, and student supervision.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+
+        <div class="timeline-item">
+
+          <div class="experience-header">
+
+            <h3 class="experience-title">
+              Lecturer & Researcher
+            </h3>
+
+          </div>
+
+
+          <div class="institution">
+
+            Masinde Muliro University of Science
+            and Technology (MMUST) · Kenya
+
+          </div>
+
+
+          <ul class="cv-list">
+
+            <li>
+              Conducted research in molecular biology,
+              microbiology, genomics, biotechnology,
+              and bioinformatics.
+            </li>
+
+            <li>
+              Taught undergraduate and postgraduate courses
+              in molecular biology, microbiology,
+              biotechnology, and bioinformatics.
+            </li>
+
+            <li>
+              Supervised undergraduate, MSc, and PhD
+              research projects.
+            </li>
+
+            <li>
+              Guided students in experimental design,
+              biological data analysis, interpretation,
+              and scientific writing.
+            </li>
+
+            <li>
+              Coordinated student research activities
+              and contributed to departmental and
+              collaborative research projects.
+            </li>
+
+            <li>
+              Contributed to research proposal development
+              and organised workshops, seminars,
+              and practical bioinformatics training.
+            </li>
+
+          </ul>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- EDUCATION -->
+
+      <section
+        class="cv-section"
+        id="education"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            03
+          </div>
+
+          <h2>
+            Education
+          </h2>
+
+        </div>
+
+
+
+        <div class="education-item">
+
+          <div class="degree">
+
+            PhD in Molecular Biology / Microbiology
+
+          </div>
+
+
+          <div class="school">
+
+            Friedrich Schiller University Jena · Germany
+
+          </div>
+
+
+          <div class="education-description">
+
+            Research focused on plant–microbe interactions,
+            microbial molecular biology, genomics,
+            transcriptomics, stress responses,
+            and biological nitrogen fixation.
+
+          </div>
+
+        </div>
+
+
+
+        <div class="education-item">
+
+          <div class="degree">
+
+            MSc in Biotechnology
+
+          </div>
+
+
+          <div class="school">
+
+            Masinde Muliro University of Science
+            and Technology · Kenya
+
+          </div>
+
+        </div>
+
+
+
+        <div class="education-item">
+
+          <div class="degree">
+
+            BSc in Biochemistry
+
+          </div>
+
+
+          <div class="school">
+
+            Masinde Muliro University of Science
+            and Technology · Kenya
+
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- PROJECTS -->
+
+      <section
+        class="cv-section"
+        id="projects"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            04
+          </div>
+
+          <h2>
+            Selected Research & Software Projects
+          </h2>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+          <article class="project-card featured">
+
+            <h3>
+              BOTAS — Bacterial RNA-seq Analysis Framework
+            </h3>
+
+
+            <p>
+
+              Developed an end-to-end computational framework
+              for bacterial RNA-seq analysis, including sequence
+              alignment, gene-level quantification, operon
+              inference, and reproducible downstream analysis.
+
+              Work includes benchmarking using experimental
+              RNA-seq datasets with emphasis on reproducibility,
+              computational performance, transparent evaluation,
+              and usability.
+
+            </p>
+
+
+            <a
+              class="project-link"
+              href="https://github.com/clabe-wekesa/botas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View BOTAS on GitHub →
+            </a>
+
+          </article>
+
+
+
+          <article class="project-card">
+
+            <h3>
+              Multi-omics Integration
+            </h3>
+
+
+            <p>
+
+              Integrated transcriptomic, metabolomic,
+              microbiome, phenotypic, and environmental
+              datasets to investigate plant defence responses
+              across ecological conditions.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="project-card">
+
+            <h3>
+              Comparative & Evolutionary Genomics
+            </h3>
+
+
+            <p>
+
+              Performed large-scale comparative genomic
+              and phylogenomic analyses of bacterial regulatory
+              and symbiosis-associated genes, incorporating
+              sequence processing, alignment, phylogenetic
+              inference, annotation, and comparative analysis.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="project-card">
+
+            <h3>
+              Metagenomics & Microbiome Analysis
+            </h3>
+
+
+            <p>
+
+              Developed and applied workflows for sequence
+              preprocessing, assembly, taxonomic classification,
+              functional annotation, comparative analysis,
+              and biological interpretation of complex
+              microbial communities.
+
+            </p>
+
+          </article>
+
+
+
+          <article class="project-card">
+
+            <h3>
+              Reproducible Computational Biology
+            </h3>
+
+
+            <p>
+
+              Developed Python-, R-, Bash-, and Linux-based
+              workflows for biological sequence analysis,
+              quantitative processing, statistical evaluation,
+              visualisation, and reproducible research.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </section>
+
+
+
+      <!-- TECHNICAL SKILLS -->
+
+      <section
+        class="cv-section"
+        id="skills"
+      >
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            05
+          </div>
+
+          <h2>
+            Technical Expertise
+          </h2>
+
+        </div>
+
+
+
+        <div class="skill-category">
+
+          <h3>
+            Computational Biology
+          </h3>
+
+
+          <div class="tech-tags">
+
+            <span class="tech-tag">RNA-seq</span>
+
+            <span class="tech-tag">Transcriptomics</span>
+
+            <span class="tech-tag">Genomics</span>
+
+            <span class="tech-tag">Metagenomics</span>
+
+            <span class="tech-tag">Comparative Genomics</span>
+
+            <span class="tech-tag">Functional Genomics</span>
+
+            <span class="tech-tag">Multi-omics Integration</span>
+
+            <span class="tech-tag">Differential Expression</span>
+
+            <span class="tech-tag">Genome Annotation</span>
+
+            <span class="tech-tag">Phylogenomics</span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="skill-category">
+
+          <h3>
+            Programming, Statistics & Computing
+          </h3>
+
+
+          <div class="tech-tags">
+
+            <span class="tech-tag">Python</span>
+
+            <span class="tech-tag">R</span>
+
+            <span class="tech-tag">Bash</span>
+
+            <span class="tech-tag">pandas</span>
+
+            <span class="tech-tag">NumPy</span>
+
+            <span class="tech-tag">scikit-learn</span>
+
+            <span class="tech-tag">Statistical Modelling</span>
+
+            <span class="tech-tag">Machine Learning</span>
+
+            <span class="tech-tag">Data Visualization</span>
+
+            <span class="tech-tag">Linux</span>
+
+            <span class="tech-tag">HPC — SGE/Slurm</span>
+
+            <span class="tech-tag">Git/GitHub</span>
+
+            <span class="tech-tag">Conda</span>
+
+            <span class="tech-tag">Docker</span>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="skill-category">
+
+          <h3>
+            Bioinformatics Tools
+          </h3>
+
+
+          <div class="tech-tags">
+
+            <span class="tech-tag">DESeq2</span>
+
+            <span class="tech-tag">edgeR</span>
+
+            <span class="tech-tag">featureCounts</span>
+
+            <span class="tech-tag">Salmon</span>
+
+            <span class="tech-tag">Kallisto</span>
+
+            <span class="tech-tag">HISAT2</span>
+
+            <span class="tech-tag">Bowtie2</span>
+
+            <span class="tech-tag">Trinity</span>
+
+            <span class="tech-tag">SPAdes</span>
+
+            <span class="tech-tag">Kraken2 / Bracken</span>
+
+            <span class="tech-tag">BLAST / DIAMOND</span>
+
+            <span class="tech-tag">MAFFT</span>
+
+            <span class="tech-tag">IQ-TREE</span>
+
+            <span class="tech-tag">Prokka</span>
+
+            <span class="tech-tag">Panaroo</span>
+
+          </div>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- SOFTWARE -->
+
+      <section class="cv-section">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            06
+          </div>
+
+          <h2>
+            Scientific Software Development
+          </h2>
+
+        </div>
+
+
+
+        <div class="software-item">
+
+          <h3>
+            BOTAS
+          </h3>
+
+
+          <p>
+
+            Computational framework for reproducible
+            bacterial RNA-seq analysis, including alignment,
+            gene quantification, and operon analysis.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="software-item">
+
+          <h3>
+            MLDockKit
+          </h3>
+
+
+          <p>
+
+            Machine-learning-assisted computational toolkit
+            for molecular docking and biological data analysis.
+
+          </p>
+
+        </div>
+
+
+
+        <div class="software-item">
+
+          <h3>
+            Scientific Utilities
+          </h3>
+
+
+          <p>
+
+            Development of additional Python-based utilities
+            for biological sequence analysis, quantitative
+            data processing, visualization, and reproducible
+            research workflows.
+
+          </p>
+
+        </div>
+
+
+      </section>
+
+
+
+      <!-- COORDINATION -->
+
+      <section class="cv-section">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            07
+          </div>
+
+          <h2>
+            Research Coordination, Supervision & Communication
+          </h2>
+
+        </div>
+
+
+        <ul class="cv-list">
+
+          <li>
+            Coordinated research implementation and
+            communication between collaborating scientists
+            in Germany and Norway.
+          </li>
+
+          <li>
+            Supervised and supported undergraduate,
+            MSc, and PhD research activities.
+          </li>
+
+          <li>
+            Contributed to collaborative research proposals
+            involving international partners.
+          </li>
+
+          <li>
+            Organised scientific workshops, seminars,
+            and bioinformatics training activities.
+          </li>
+
+          <li>
+            Experienced in scientific manuscript preparation,
+            technical documentation, research presentations,
+            and interdisciplinary scientific communication.
+          </li>
+
+          <li>
+            Presented and communicated research findings
+            to multidisciplinary and international audiences.
+          </li>
+
+        </ul>
+
+
+      </section>
+
+
+
+      <!-- CERTIFICATIONS -->
+
+      <section class="cv-section">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            08
+          </div>
+
+          <h2>
+            Certification & Professional Development
+          </h2>
+
+        </div>
+
+
+        <div class="software-item">
+
+          <h3>
+            Google Project Management Professional Certificate
+          </h3>
+
+          <p>
+            Google / Coursera
+          </p>
+
+        </div>
+
+
+        <p class="summary-text">
+
+          Additional professional development in
+          bioinformatics, data science, artificial intelligence,
+          and scientific computing.
+
+        </p>
+
+
+      </section>
+
+
+
+      <!-- SCIENTIFIC INTERESTS -->
+
+      <section class="cv-section">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            09
+          </div>
+
+          <h2>
+            Scientific Interests
+          </h2>
+
+        </div>
+
+
+        <div class="interest-tags">
+
+          <span class="interest-tag">
+            Computational Biology
+          </span>
+
+          <span class="interest-tag">
+            Gene Regulation
+          </span>
+
+          <span class="interest-tag">
+            Single-cell Genomics
+          </span>
+
+          <span class="interest-tag">
+            Multi-omics Integration
+          </span>
+
+          <span class="interest-tag">
+            Regulatory Networks
+          </span>
+
+          <span class="interest-tag">
+            Transcriptomics
+          </span>
+
+          <span class="interest-tag">
+            Functional Genomics
+          </span>
+
+          <span class="interest-tag">
+            Systems Biology
+          </span>
+
+          <span class="interest-tag">
+            Reproducible Bioinformatics
+          </span>
+
+        </div>
+
+
+        <p class="summary-text">
+
+          My scientific interests centre on computational
+          approaches for understanding how molecular and
+          regulatory changes give rise to complex biological
+          phenotypes.
+
+          I am particularly interested in integrating multiple
+          molecular layers to identify regulatory relationships
+          that cannot be resolved from individual datasets alone,
+          and in extending transcriptomic and multi-omics
+          approaches toward single-cell transcriptomics,
+          chromatin-accessibility data, and gene regulatory
+          network reconstruction.
+
+        </p>
+
+      </section>
+
+
+
+      <!-- ACADEMIC PROFILES -->
+
+      <section class="cv-section">
+
+        <div class="section-heading">
+
+          <div class="section-number">
+            10
+          </div>
+
+          <h2>
+            Academic Profiles
+          </h2>
+
+        </div>
+
+
+        <div class="project-grid">
+
+
+          <a
+            class="project-card"
+            href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              Google Scholar
+            </h3>
+
+            <p>
+              Publications, citations,
+              and academic research profile.
+            </p>
+
+          </a>
+
+
+
+          <a
+            class="project-card"
+            href="https://orcid.org/0000-0002-1815-9357"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              ORCID
+            </h3>
+
+            <p>
+              ORCID:
+              0000-0002-1815-9357
+            </p>
+
+          </a>
+
+
+
+          <a
+            class="project-card"
+            href="https://github.com/clabe-wekesa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              GitHub
+            </h3>
+
+            <p>
+              Open-source research software
+              and computational projects.
+            </p>
+
+          </a>
+
+
+
+          <a
+            class="project-card"
+            href="Clabe_Wekesa_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              PDF Curriculum Vitae
+            </h3>
+
+            <p>
+              View or save the traditional
+              PDF version of my CV.
+            </p>
+
+          </a>
+
+
+        </div>
+
+      </section>
+
+
+    </div>
+
+  </div>
+
+</main>
+
+
+
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<footer>
+
+  <div class="container footer-inner">
+
+
+    <div>
+
+      © <span id="year"></span>
+      Clabe Wekesa
+
+    </div>
+
+
+    <div class="footer-links">
+
+
+      <a href="index.html">
+        Home
+      </a>
+
+
+      <a
+        href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar
+      </a>
+
+
+      <a
+        href="https://orcid.org/0000-0002-1815-9357"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ORCID
+      </a>
+
+
+      <a
+        href="https://github.com/clabe-wekesa"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+
+      <a
+        href="Clabe_Wekesa_CV.pdf"
+        target="_blank"
+      >
+        PDF CV
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+</footer>
+
+
+
+<script>
+
+  document
+    .getElementById("year")
+    .textContent =
+    new Date().getFullYear();
+
+</script>
+
+
+</body>
+
+</html>
