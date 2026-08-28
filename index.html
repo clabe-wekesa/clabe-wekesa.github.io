@@ -2,236 +2,2154 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Clabe Wekesa | Bioinformatics & Molecular Biology</title>
 
   <meta
     name="description"
-    content="Clabe Wekesa — Bioinformatician and Molecular Biologist working in microbial genomics, RNA-seq, metagenomics, microbial ecology, and plant–microbe interactions."
+    content="Clabe Wekesa is a bioinformatician and molecular biologist working in microbial genomics, transcriptomics, metagenomics, microbial ecology, plant–microbe interactions, and bioinformatics software development."
   >
 
+  <meta name="author" content="Clabe Wekesa">
+
+  <meta name="theme-color" content="#0b3d4c">
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:title" content="Clabe Wekesa | Bioinformatics & Molecular Biology">
+  <meta
+    property="og:description"
+    content="Research in microbial genomics, transcriptomics, metagenomics, plant–microbe interactions, microbial ecology, and open-source bioinformatics."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://clabe-wekesa.github.io">
+
   <style>
+    :root {
+      --navy: #102a43;
+      --navy-deep: #071e2a;
+      --teal: #0f6f78;
+      --teal-light: #dff3f1;
+      --blue: #1f6feb;
+      --gold: #d3a72f;
+
+      --text: #183042;
+      --text-soft: #526575;
+      --text-light: #758594;
+
+      --bg: #ffffff;
+      --bg-soft: #f5f8fa;
+      --bg-alt: #edf4f5;
+
+      --border: #dce5ea;
+
+      --shadow:
+        0 14px 35px rgba(16, 42, 67, 0.08);
+
+      --shadow-hover:
+        0 18px 45px rgba(16, 42, 67, 0.14);
+
+      --radius: 16px;
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 60px 25px;
+      margin: 0;
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+      background: var(--bg);
       line-height: 1.7;
-      color: #222;
-      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
     }
 
-    h1 {
-      font-size: 2.8rem;
-      margin-bottom: 5px;
-    }
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: #555;
-      margin-bottom: 50px;
-    }
-
-    h2 {
-      margin-top: 45px;
-      margin-bottom: 15px;
-      font-size: 1.5rem;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-    }
-
-    p {
-      margin-bottom: 16px;
-    }
-
-    ul {
-      padding-left: 22px;
-    }
-
-    li {
-      margin-bottom: 7px;
+    img {
+      max-width: 100%;
     }
 
     a {
-      color: #1769aa;
+      color: var(--teal);
       text-decoration: none;
     }
 
     a:hover {
-      text-decoration: underline;
+      text-decoration: none;
     }
 
-    .software {
-      padding: 20px;
-      background: #f7f7f7;
-      border-radius: 8px;
+    section {
+      scroll-margin-top: 90px;
     }
 
-    .software h3 {
-      margin-top: 0;
+    .container {
+      width: min(var(--max-width), calc(100% - 44px));
+      margin: 0 auto;
+    }
+
+    /* -------------------------------------------------------
+       NAVIGATION
+    ------------------------------------------------------- */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid rgba(220, 229, 234, 0.9);
+    }
+
+    .nav-inner {
+      min-height: 68px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 30px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+
+      color: var(--navy);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 10px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--teal)
+        );
+
+      font-size: 0.85rem;
+      letter-spacing: 0.03em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--text-soft);
+
+      font-size: 0.9rem;
+      font-weight: 700;
+
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--teal);
+    }
+
+    .nav-cv {
+      padding: 8px 14px;
+
+      border: 1px solid var(--teal);
+      border-radius: 9px;
+
+      color: var(--teal) !important;
+    }
+
+    .nav-cv:hover {
+      background: var(--teal);
+      color: #ffffff !important;
+    }
+
+    /* -------------------------------------------------------
+       HERO
+    ------------------------------------------------------- */
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+
+      background:
+        radial-gradient(
+          circle at 90% 10%,
+          rgba(15, 111, 120, 0.14),
+          transparent 36%
+        ),
+        radial-gradient(
+          circle at 5% 0%,
+          rgba(31, 111, 235, 0.08),
+          transparent 32%
+        ),
+        linear-gradient(
+          135deg,
+          #ffffff 0%,
+          #f5fafb 58%,
+          #edf7f6 100%
+        );
+
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-inner {
+      min-height: 610px;
+
+      display: grid;
+      grid-template-columns: 1.45fr 0.55fr;
+      align-items: center;
+
+      gap: 55px;
+
+      padding: 90px 0 85px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+
+      margin-bottom: 18px;
+
+      color: var(--teal);
+
+      font-size: 0.82rem;
+      font-weight: 800;
+
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+
+      width: 32px;
+      height: 2px;
+
+      background: var(--teal);
+    }
+
+    h1 {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(3rem, 7vw, 5.8rem);
+
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+    }
+
+    .hero-role {
+      margin: 22px 0 18px;
+
+      max-width: 800px;
+
+      color: var(--text);
+
+      font-size:
+        clamp(1.2rem, 2vw, 1.55rem);
+
+      font-weight: 650;
+    }
+
+    .hero-description {
+      max-width: 780px;
+
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      margin-top: 34px;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 11px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 11px 18px;
+
+      border-radius: 10px;
+
+      font-weight: 750;
+      font-size: 0.92rem;
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary {
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy),
+          var(--teal)
+        );
+
+      box-shadow:
+        0 10px 25px rgba(15, 111, 120, 0.19);
+    }
+
+    .button-primary:hover {
+      box-shadow:
+        0 14px 30px rgba(15, 111, 120, 0.27);
+    }
+
+    .button-secondary {
+      color: var(--navy);
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+    }
+
+    .button-secondary:hover {
+      border-color: #b9c8d1;
+      box-shadow:
+        0 10px 24px rgba(16, 42, 67, 0.08);
+    }
+
+    /* Hero visual */
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-symbol {
+      position: relative;
+
+      width: 265px;
+      height: 265px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--navy),
+          var(--teal)
+        );
+
+      box-shadow:
+        0 30px 65px rgba(16, 42, 67, 0.20);
+    }
+
+    .profile-symbol::before,
+    .profile-symbol::after {
+      content: "";
+
+      position: absolute;
+
+      border-radius: 50%;
+
+      border: 1px solid rgba(15, 111, 120, 0.25);
+    }
+
+    .profile-symbol::before {
+      width: 305px;
+      height: 305px;
+    }
+
+    .profile-symbol::after {
+      width: 345px;
+      height: 345px;
+
+      border-color: rgba(15, 111, 120, 0.12);
+    }
+
+    .initials {
+      font-size: 4.8rem;
+      font-weight: 800;
+
+      letter-spacing: -0.08em;
+    }
+
+    .symbol-subtext {
+      position: absolute;
+      bottom: 53px;
+
+      font-size: 0.74rem;
+      font-weight: 700;
+
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+
+      opacity: 0.78;
+    }
+
+    /* -------------------------------------------------------
+       GENERAL SECTIONS
+    ------------------------------------------------------- */
+
+    .section {
+      padding: 80px 0;
+    }
+
+    .section-alt {
+      background: var(--bg-soft);
+    }
+
+    .section-header {
+      margin-bottom: 36px;
+    }
+
+    .section-kicker {
       margin-bottom: 5px;
+
+      color: var(--teal);
+
+      font-size: 0.78rem;
+      font-weight: 800;
+
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
     }
 
-    .links a {
-      margin-right: 20px;
+    h2 {
+      margin: 0;
+
+      color: var(--navy);
+
+      font-size:
+        clamp(2rem, 4vw, 2.9rem);
+
+      line-height: 1.15;
+
+      letter-spacing: -0.035em;
     }
 
-    footer {
-      margin-top: 60px;
-      padding-top: 20px;
-      border-top: 1px solid #ddd;
-      color: #777;
+    .section-intro {
+      max-width: 800px;
+
+      margin-top: 14px;
+
+      color: var(--text-soft);
+
+      font-size: 1.02rem;
+    }
+
+    /* -------------------------------------------------------
+       ABOUT
+    ------------------------------------------------------- */
+
+    .about-layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(270px, 0.7fr);
+
+      gap: 48px;
+      align-items: start;
+    }
+
+    .about-text p {
+      color: var(--text-soft);
+
+      font-size: 1.04rem;
+
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    .about-side {
+      padding: 26px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #f7fbfb,
+          #eef6f6
+        );
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .about-side h3 {
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      color: var(--navy);
+
+      font-size: 1rem;
+    }
+
+    .focus-list {
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    .focus-list li {
+      position: relative;
+
+      padding-left: 18px;
+      margin-bottom: 9px;
+
+      color: var(--text-soft);
+
+      font-size: 0.93rem;
+    }
+
+    .focus-list li::before {
+      content: "";
+
+      position: absolute;
+      top: 0.72em;
+      left: 0;
+
+      width: 6px;
+      height: 6px;
+
+      border-radius: 50%;
+
+      background: var(--teal);
+    }
+
+    /* -------------------------------------------------------
+       RESEARCH
+    ------------------------------------------------------- */
+
+    .research-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .research-card {
+      position: relative;
+
+      min-height: 205px;
+
+      padding: 25px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      box-shadow:
+        0 5px 18px rgba(16, 42, 67, 0.035);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #bdd2d5;
+
+      box-shadow: var(--shadow);
+    }
+
+    .card-number {
+      margin-bottom: 18px;
+
+      color: var(--teal);
+
+      font-size: 0.77rem;
+      font-weight: 850;
+
+      letter-spacing: 0.08em;
+    }
+
+    .research-card h3 {
+      margin: 0 0 9px;
+
+      color: var(--navy);
+
+      font-size: 1.06rem;
+    }
+
+    .research-card p {
+      margin: 0;
+
+      color: var(--text-soft);
+
+      font-size: 0.92rem;
+    }
+
+    /* -------------------------------------------------------
+       SOFTWARE / BOTAS
+    ------------------------------------------------------- */
+
+    .featured-project {
+      position: relative;
+      overflow: hidden;
+
+      padding: 38px;
+
+      color: #ffffff;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--navy-deep),
+          var(--navy) 55%,
+          var(--teal)
+        );
+
+      border-radius: 22px;
+
+      box-shadow:
+        0 25px 55px rgba(16, 42, 67, 0.20);
+    }
+
+    .featured-project::after {
+      content: "";
+
+      position: absolute;
+      width: 310px;
+      height: 310px;
+
+      right: -95px;
+      top: -95px;
+
+      border-radius: 50%;
+
+      background:
+        rgba(255, 255, 255, 0.055);
+    }
+
+    .project-label {
+      position: relative;
+      z-index: 2;
+
+      margin-bottom: 12px;
+
+      color: #9ee2dc;
+
+      font-size: 0.75rem;
+      font-weight: 850;
+
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
+    .featured-project h3 {
+      position: relative;
+      z-index: 2;
+
+      margin: 0;
+
+      font-size: 2.4rem;
+
+      letter-spacing: -0.04em;
+    }
+
+    .project-fullname {
+      position: relative;
+      z-index: 2;
+
+      margin-top: 3px;
+
+      font-size: 1rem;
+      font-weight: 650;
+
+      color: #cfe8e8;
+    }
+
+    .project-description {
+      position: relative;
+      z-index: 2;
+
+      max-width: 760px;
+
+      margin-top: 22px;
+
+      color: #d6e3e8;
+
+      font-size: 1rem;
+    }
+
+    .tags {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 8px;
+
+      margin: 24px 0 27px;
+    }
+
+    .tag {
+      padding: 6px 11px;
+
+      border-radius: 999px;
+
+      color: #e7ffff;
+
+      background:
+        rgba(255, 255, 255, 0.09);
+
+      border:
+        1px solid rgba(255, 255, 255, 0.12);
+
+      font-size: 0.79rem;
+      font-weight: 700;
+    }
+
+    .project-actions {
+      position: relative;
+      z-index: 2;
+
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 10px;
+    }
+
+    .project-button {
+      display: inline-flex;
+
+      padding: 10px 16px;
+
+      border-radius: 9px;
+
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .project-button-light {
+      background: #ffffff;
+
+      color: var(--navy);
+    }
+
+    .project-button-outline {
+      color: #ffffff;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.30);
+    }
+
+    .project-button-outline:hover {
+      background:
+        rgba(255, 255, 255, 0.09);
+    }
+
+    /* -------------------------------------------------------
+       PROFILES / PUBLICATIONS
+    ------------------------------------------------------- */
+
+    .profile-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 18px;
+    }
+
+    .profile-card {
+      padding: 24px;
+
+      background: #ffffff;
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      color: var(--text);
+
+      transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .profile-card:hover {
+      transform: translateY(-4px);
+
+      border-color: #bdd2d5;
+
+      box-shadow: var(--shadow);
+    }
+
+    .profile-card h3 {
+      margin: 0 0 6px;
+
+      color: var(--navy);
+
+      font-size: 1.05rem;
+    }
+
+    .profile-card p {
+      margin: 0;
+
+      color: var(--text-soft);
+
       font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      body {
-        padding: 35px 20px;
+    .profile-arrow {
+      display: inline-block;
+
+      margin-top: 17px;
+
+      color: var(--teal);
+
+      font-size: 0.88rem;
+      font-weight: 750;
+    }
+
+    /* -------------------------------------------------------
+       CV
+    ------------------------------------------------------- */
+
+    .cv-panel {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.25fr)
+        minmax(270px, 0.75fr);
+
+      gap: 40px;
+
+      padding: 38px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #f9fcfc,
+          #edf6f6
+        );
+
+      border: 1px solid var(--border);
+      border-radius: 20px;
+    }
+
+    .cv-panel h3 {
+      margin: 0 0 13px;
+
+      color: var(--navy);
+
+      font-size: 1.7rem;
+
+      letter-spacing: -0.025em;
+    }
+
+    .cv-panel p {
+      margin: 0;
+
+      max-width: 690px;
+
+      color: var(--text-soft);
+    }
+
+    .cv-actions {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 10px;
+    }
+
+    .cv-actions .button {
+      width: 100%;
+    }
+
+    /* -------------------------------------------------------
+       CONTACT
+    ------------------------------------------------------- */
+
+    .contact-layout {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.2fr)
+        minmax(300px, 0.8fr);
+
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-text {
+      color: var(--text-soft);
+
+      font-size: 1.03rem;
+    }
+
+    .contact-card {
+      padding: 28px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--navy),
+          #174b58
+        );
+
+      border-radius: var(--radius);
+
+      box-shadow: var(--shadow);
+    }
+
+    .contact-item {
+      margin-bottom: 18px;
+    }
+
+    .contact-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-label {
+      margin-bottom: 2px;
+
+      color: #9ed8d6;
+
+      font-size: 0.72rem;
+      font-weight: 800;
+
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+    }
+
+    .contact-card a,
+    .contact-card span {
+      color: #ffffff;
+
+      font-size: 0.94rem;
+    }
+
+    .contact-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------------------------
+       FOOTER
+    ------------------------------------------------------- */
+
+    footer {
+      color: #b9cbd5;
+
+      background: var(--navy-deep);
+    }
+
+    .footer-inner {
+      min-height: 105px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      flex-wrap: wrap;
+
+      gap: 16px;
+
+      font-size: 0.84rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+
+      gap: 17px;
+    }
+
+    .footer-links a {
+      color: #cfe0e8;
+    }
+
+    .footer-links a:hover {
+      color: #ffffff;
+    }
+
+    /* -------------------------------------------------------
+       ACCESSIBILITY
+    ------------------------------------------------------- */
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid #78c8c2;
+      outline-offset: 4px;
+    }
+
+    /* -------------------------------------------------------
+       RESPONSIVE
+    ------------------------------------------------------- */
+
+    @media (max-width: 930px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .research-grid,
+      .profile-grid {
+        grid-template-columns:
+          repeat(2, minmax(0, 1fr));
+      }
+
+      .about-layout,
+      .cv-panel,
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .cv-actions {
+        flex-direction: row;
+      }
+
+      .cv-actions .button {
+        width: auto;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+
+        padding: 12px 0;
+
+        gap: 8px;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 0.83rem;
+      }
+
+      .nav-cv {
+        padding: 0;
+        border: none;
+      }
+
+      .nav-cv:hover {
+        background: transparent;
+        color: var(--teal) !important;
+      }
+
+      .hero-inner {
+        padding: 65px 0 60px;
       }
 
       h1 {
-        font-size: 2.2rem;
+        font-size:
+          clamp(3rem, 15vw, 4.5rem);
       }
 
-      .links a {
-        display: block;
-        margin-bottom: 8px;
+      .section {
+        padding: 60px 0;
+      }
+
+      .research-grid,
+      .profile-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-project {
+        padding: 27px;
+      }
+
+      .featured-project h3 {
+        font-size: 2rem;
+      }
+
+      .cv-panel {
+        padding: 27px;
+      }
+
+      .cv-actions {
+        flex-direction: column;
+      }
+
+      .cv-actions .button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        width:
+          min(var(--max-width), calc(100% - 30px));
+      }
+
+      .hero-actions,
+      .project-actions {
+        flex-direction: column;
+      }
+
+      .button,
+      .project-button {
+        width: 100%;
       }
     }
   </style>
+
+
+  <!-- Structured academic/profile data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Clabe Wekesa",
+    "url": "https://clabe-wekesa.github.io",
+    "sameAs": [
+      "https://github.com/clabe-wekesa",
+      "https://orcid.org/0000-0002-1815-9357",
+      "https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+    ],
+    "jobTitle": "Bioinformatician and Molecular Biologist",
+    "knowsAbout": [
+      "Bioinformatics",
+      "Microbial Genomics",
+      "RNA-seq",
+      "Transcriptomics",
+      "Metagenomics",
+      "Microbial Ecology",
+      "Plant-Microbe Interactions"
+    ]
+  }
+  </script>
+
 </head>
+
 
 <body>
 
-  <header>
-    <h1>Clabe Wekesa</h1>
+  <!-- =======================================================
+       NAVIGATION
+  ======================================================== -->
 
-    <div class="subtitle">
-      Bioinformatician | Molecular Biologist | Microbial Genomics
+  <nav>
+
+    <div class="container nav-inner">
+
+      <a class="brand" href="#top">
+
+        <div class="brand-mark">
+          CW
+        </div>
+
+        <span>Clabe Wekesa</span>
+
+      </a>
+
+
+      <div class="nav-links">
+
+        <a href="#about">About</a>
+
+        <a href="#research">Research</a>
+
+        <a href="#software">Software</a>
+
+        <a href="#publications">Publications</a>
+
+        <a
+          class="nav-cv"
+          href="#cv"
+        >
+          CV
+        </a>
+
+        <a href="#contact">Contact</a>
+
+      </div>
+
     </div>
+
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+  ======================================================== -->
+
+  <header class="hero" id="top">
+
+    <div class="container hero-inner">
+
+
+      <div>
+
+        <div class="eyebrow">
+          Bioinformatics · Molecular Biology
+        </div>
+
+
+        <h1>
+          Clabe<br>
+          Wekesa
+        </h1>
+
+
+        <div class="hero-role">
+
+          Bioinformatician |
+          Molecular Biologist |
+          Microbial Genomics
+
+        </div>
+
+
+        <p class="hero-description">
+
+          I work at the intersection of experimental molecular biology
+          and computational biology, with research interests spanning
+          microbial genomics, transcriptomics, metagenomics,
+          microbial ecology, plant–microbe interactions,
+          and bioinformatics software development.
+
+        </p>
+
+
+        <div class="hero-actions">
+
+          <a
+            class="button button-primary"
+            href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Google Scholar
+          </a>
+
+
+          <a
+            class="button button-secondary"
+            href="https://orcid.org/0000-0002-1815-9357"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ORCID
+          </a>
+
+
+          <a
+            class="button button-secondary"
+            href="https://github.com/clabe-wekesa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+
+
+          <a
+            class="button button-secondary"
+            href="Clabe_Wekesa_CV.pdf"
+            target="_blank"
+          >
+            View CV
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="hero-visual">
+
+        <div class="profile-symbol">
+
+          <div class="initials">
+            CW
+          </div>
+
+          <div class="symbol-subtext">
+            Bioinformatics
+          </div>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
   </header>
 
 
-  <section>
-    <h2>About Me</h2>
-
-    <p>
-      I am a molecular biologist and bioinformatician working at the intersection
-      of microbial genomics, transcriptomics, metagenomics, microbial ecology,
-      and plant–microbe interactions.
-    </p>
-
-    <p>
-      My research combines experimental molecular biology with computational
-      approaches to understand microbial systems and biological interactions.
-      I am also interested in developing reproducible and accessible
-      bioinformatics tools for biological data analysis.
-    </p>
-  </section>
+  <main>
 
 
-  <section>
-    <h2>Research Interests</h2>
+    <!-- =====================================================
+         ABOUT
+    ====================================================== -->
 
-    <ul>
-      <li>Microbial genomics</li>
-      <li>RNA-seq and transcriptomics</li>
-      <li>Metagenomics</li>
-      <li>Plant–microbe interactions</li>
-      <li>Microbial ecology</li>
-      <li>Bioinformatics software development</li>
-    </ul>
-  </section>
+    <section class="section" id="about">
+
+      <div class="container">
 
 
-  <section>
-    <h2>Software</h2>
+        <div class="section-header">
 
-    <div class="software">
-      <h3>BOTAS</h3>
+          <div class="section-kicker">
+            About
+          </div>
 
-      <p>
-        <strong>Bacterial Operon and Transcriptome Analysis Suite</strong>
-      </p>
+          <h2>
+            Bridging molecular biology
+            and computational science
+          </h2>
 
-      <p>
-        BOTAS is an open-source bioinformatics toolkit for bacterial RNA-seq
-        analysis, including reference indexing, read alignment, gene
-        quantification, operon inference, and analysis of circular bacterial
-        genomes.
-      </p>
-
-      <a
-        href="https://github.com/clabe-wekesa/botas"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        View BOTAS on GitHub →
-      </a>
-    </div>
-  </section>
+        </div>
 
 
-  <section>
-    <h2>Publications & Academic Profiles</h2>
-
-    <div class="links">
-
-      <a
-        href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Google Scholar
-      </a>
-
-      <a
-        href="https://orcid.org/0000-0002-1815-9357"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        ORCID
-      </a>
-
-      <a
-        href="https://github.com/clabe-wekesa"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GitHub
-      </a>
-
-    </div>
-  </section>
+        <div class="about-layout">
 
 
-  <section>
-    <h2>Contact</h2>
+          <div class="about-text">
 
-    <p>
-      Email:
-      <a href="mailto:simiyu86wekesa@gmail.com">
-        simiyu86wekesa@gmail.com
-      </a>
-    </p>
+            <p>
 
-    <p>
-      GitHub:
-      <a
-        href="https://github.com/clabe-wekesa"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        clabe-wekesa
-      </a>
-    </p>
-  </section>
+              I am a molecular biologist and bioinformatician working
+              at the intersection of microbial genomics,
+              transcriptomics, metagenomics, microbial ecology,
+              and plant–microbe interactions.
 
+            </p>
+
+
+            <p>
+
+              My research combines experimental molecular biology
+              with computational approaches to investigate microbial
+              systems, biological interactions, and high-throughput
+              sequencing data.
+
+            </p>
+
+
+            <p>
+
+              I am particularly interested in developing reproducible,
+              transparent, and accessible bioinformatics approaches
+              that connect biological questions with genomic and
+              transcriptomic data analysis.
+
+            </p>
+
+
+            <p>
+
+              Alongside biological research, I develop open-source
+              computational tools intended to make complex analyses
+              more reproducible and accessible to researchers.
+
+            </p>
+
+          </div>
+
+
+          <aside class="about-side">
+
+            <h3>
+              Core focus
+            </h3>
+
+
+            <ul class="focus-list">
+
+              <li>
+                Microbial genome analysis
+              </li>
+
+              <li>
+                RNA-seq and transcriptomics
+              </li>
+
+              <li>
+                Metagenomic data analysis
+              </li>
+
+              <li>
+                Microbial ecology
+              </li>
+
+              <li>
+                Plant–microbe interactions
+              </li>
+
+              <li>
+                Reproducible bioinformatics
+              </li>
+
+              <li>
+                Scientific software development
+              </li>
+
+            </ul>
+
+          </aside>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         RESEARCH
+    ====================================================== -->
+
+    <section
+      class="section section-alt"
+      id="research"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div class="section-kicker">
+            Research
+          </div>
+
+
+          <h2>
+            Research interests
+          </h2>
+
+
+          <p class="section-intro">
+
+            My work spans computational and experimental approaches
+            to understanding microorganisms, their genomes,
+            their transcriptional activity, and their interactions
+            with hosts and environments.
+
+          </p>
+
+        </div>
+
+
+        <div class="research-grid">
+
+
+          <article class="research-card">
+
+            <div class="card-number">
+              01
+            </div>
+
+            <h3>
+              Microbial Genomics
+            </h3>
+
+            <p>
+
+              Genome analysis, comparative genomics, microbial
+              genetic variation, and genome-scale investigation
+              of microorganisms.
+
+            </p>
+
+          </article>
+
+
+          <article class="research-card">
+
+            <div class="card-number">
+              02
+            </div>
+
+            <h3>
+              RNA-seq & Transcriptomics
+            </h3>
+
+            <p>
+
+              Gene-expression analysis, bacterial transcriptomics,
+              RNA-seq workflows, quantification, and interpretation
+              of transcriptomic data.
+
+            </p>
+
+          </article>
+
+
+          <article class="research-card">
+
+            <div class="card-number">
+              03
+            </div>
+
+            <h3>
+              Metagenomics
+            </h3>
+
+            <p>
+
+              Sequencing-based characterization of microbial
+              communities, their diversity, composition,
+              and functional potential.
+
+            </p>
+
+          </article>
+
+
+          <article class="research-card">
+
+            <div class="card-number">
+              04
+            </div>
+
+            <h3>
+              Plant–Microbe Interactions
+            </h3>
+
+            <p>
+
+              Molecular and ecological investigation of interactions
+              between plants and associated microorganisms.
+
+            </p>
+
+          </article>
+
+
+          <article class="research-card">
+
+            <div class="card-number">
+              05
+            </div>
+
+            <h3>
+              Microbial Ecology
+            </h3>
+
+            <p>
+
+              Microbial diversity, community structure,
+              environmental interactions, and ecological processes
+              shaping microbial systems.
+
+            </p>
+
+          </article>
+
+
+          <article class="research-card">
+
+            <div class="card-number">
+              06
+            </div>
+
+            <h3>
+              Bioinformatics Software
+            </h3>
+
+            <p>
+
+              Development of reproducible computational tools
+              and workflows for genomic and transcriptomic
+              data analysis.
+
+            </p>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         SOFTWARE
+    ====================================================== -->
+
+    <section class="section" id="software">
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div class="section-kicker">
+            Open-source software
+          </div>
+
+
+          <h2>
+            Featured project
+          </h2>
+
+
+          <p class="section-intro">
+
+            I develop research software that combines biological
+            context with reproducible computational analysis.
+
+          </p>
+
+        </div>
+
+
+        <div class="featured-project">
+
+
+          <div class="project-label">
+            Featured open-source project
+          </div>
+
+
+          <h3>
+            BOTAS
+          </h3>
+
+
+          <div class="project-fullname">
+
+            Bacterial Operon and Transcriptome Analysis Suite
+
+          </div>
+
+
+          <p class="project-description">
+
+            BOTAS is an open-source bioinformatics toolkit
+            designed for bacterial RNA-seq analysis.
+            It provides an integrated workflow for reference
+            indexing, read alignment, gene-level quantification,
+            and operon inference, with particular consideration
+            for the structure of circular bacterial genomes.
+
+          </p>
+
+
+          <div class="tags">
+
+            <span class="tag">
+              RNA-seq
+            </span>
+
+            <span class="tag">
+              Transcriptomics
+            </span>
+
+            <span class="tag">
+              Bacterial Genomics
+            </span>
+
+            <span class="tag">
+              Operons
+            </span>
+
+            <span class="tag">
+              Circular Genomes
+            </span>
+
+            <span class="tag">
+              Python
+            </span>
+
+            <span class="tag">
+              Open Source
+            </span>
+
+          </div>
+
+
+          <div class="project-actions">
+
+
+            <a
+              class="project-button project-button-light"
+              href="https://github.com/clabe-wekesa/botas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View BOTAS on GitHub
+            </a>
+
+
+            <a
+              class="project-button project-button-outline"
+              href="https://pypi.org/project/botas-rnaseq/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on PyPI
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         PUBLICATIONS
+    ====================================================== -->
+
+    <section
+      class="section section-alt"
+      id="publications"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div class="section-kicker">
+            Research output
+          </div>
+
+
+          <h2>
+            Publications & academic profiles
+          </h2>
+
+
+          <p class="section-intro">
+
+            Publications, citation information, researcher
+            identifiers, and open-source projects are available
+            through the profiles below.
+
+          </p>
+
+        </div>
+
+
+        <div class="profile-grid">
+
+
+          <a
+            class="profile-card"
+            href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              Google Scholar
+            </h3>
+
+            <p>
+              Publications, citations,
+              and academic research profile.
+            </p>
+
+            <span class="profile-arrow">
+              View profile →
+            </span>
+
+          </a>
+
+
+          <a
+            class="profile-card"
+            href="https://orcid.org/0000-0002-1815-9357"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              ORCID
+            </h3>
+
+            <p>
+              Persistent researcher identifier:
+              0000-0002-1815-9357
+            </p>
+
+            <span class="profile-arrow">
+              View ORCID →
+            </span>
+
+          </a>
+
+
+          <a
+            class="profile-card"
+            href="https://github.com/clabe-wekesa"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <h3>
+              GitHub
+            </h3>
+
+            <p>
+              Open-source software,
+              computational projects,
+              and research code.
+            </p>
+
+            <span class="profile-arrow">
+              View GitHub →
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CV
+    ====================================================== -->
+
+    <section class="section" id="cv">
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div class="section-kicker">
+            Curriculum Vitae
+          </div>
+
+
+          <h2>
+            Academic & professional CV
+          </h2>
+
+        </div>
+
+
+        <div class="cv-panel">
+
+
+          <div>
+
+            <h3>
+              Clabe Wekesa — Curriculum Vitae
+            </h3>
+
+
+            <p>
+
+              My CV provides further information on my academic
+              background, research experience, publications,
+              computational expertise, scientific software
+              development, teaching, professional experience,
+              and research collaborations.
+
+            </p>
+
+          </div>
+
+
+          <div class="cv-actions">
+
+
+            <a
+              class="button button-primary"
+              href="Clabe_Wekesa_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View CV
+            </a>
+
+
+            <a
+              class="button button-secondary"
+              href="Clabe_Wekesa_CV.pdf"
+              download
+            >
+              Download CV
+            </a>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         CONTACT
+    ====================================================== -->
+
+    <section
+      class="section section-alt"
+      id="contact"
+    >
+
+      <div class="container">
+
+
+        <div class="section-header">
+
+          <div class="section-kicker">
+            Contact
+          </div>
+
+
+          <h2>
+            Get in touch
+          </h2>
+
+        </div>
+
+
+        <div class="contact-layout">
+
+
+          <div class="contact-text">
+
+            <p>
+
+              I welcome communication regarding research
+              collaboration, bioinformatics, microbial genomics,
+              transcriptomics, metagenomics, plant–microbe
+              interactions, and open-source scientific software.
+
+            </p>
+
+
+            <p>
+
+              For research discussions, collaboration opportunities,
+              or questions about my work, please feel free to contact
+              me by email or through the academic and developer
+              profiles listed here.
+
+            </p>
+
+          </div>
+
+
+          <div class="contact-card">
+
+
+            <div class="contact-item">
+
+              <div class="contact-label">
+                Email
+              </div>
+
+              <a
+                href="mailto:simiyu86wekesa@gmail.com"
+              >
+                simiyu86wekesa@gmail.com
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-label">
+                GitHub
+              </div>
+
+              <a
+                href="https://github.com/clabe-wekesa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                github.com/clabe-wekesa
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-label">
+                ORCID
+              </div>
+
+              <a
+                href="https://orcid.org/0000-0002-1815-9357"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                0000-0002-1815-9357
+              </a>
+
+            </div>
+
+
+            <div class="contact-item">
+
+              <div class="contact-label">
+                Website
+              </div>
+
+              <a
+                href="https://clabe-wekesa.github.io"
+              >
+                clabe-wekesa.github.io
+              </a>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =======================================================
+       FOOTER
+  ======================================================== -->
 
   <footer>
-    © 2026 Clabe Wekesa
+
+    <div class="container footer-inner">
+
+
+      <div>
+
+        © <span id="year"></span> Clabe Wekesa
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a
+          href="https://scholar.google.com/citations?user=HyH7F-YAAAAJ&hl=en"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Google Scholar
+        </a>
+
+
+        <a
+          href="https://orcid.org/0000-0002-1815-9357"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ORCID
+        </a>
+
+
+        <a
+          href="https://github.com/clabe-wekesa"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+
+      </div>
+
+
+    </div>
+
   </footer>
+
+
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
 
 </body>
 </html>
